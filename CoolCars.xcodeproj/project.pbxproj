@@ -7,23 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A29BD0A24980E3400BFEDF8 /* CarDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A29BD0924980E3400BFEDF8 /* CarDetailVC.swift */; };
 		8AD16A812497FA1D00F1F53A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD16A802497FA1D00F1F53A /* AppDelegate.swift */; };
 		8AD16A832497FA1D00F1F53A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD16A822497FA1D00F1F53A /* SceneDelegate.swift */; };
-		8AD16A852497FA1D00F1F53A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD16A842497FA1D00F1F53A /* ViewController.swift */; };
+		8AD16A852497FA1D00F1F53A /* CarSelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD16A842497FA1D00F1F53A /* CarSelectVC.swift */; };
 		8AD16A882497FA1D00F1F53A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AD16A862497FA1D00F1F53A /* Main.storyboard */; };
 		8AD16A8A2497FA1F00F1F53A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AD16A892497FA1F00F1F53A /* Assets.xcassets */; };
 		8AD16A8D2497FA1F00F1F53A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AD16A8B2497FA1F00F1F53A /* LaunchScreen.storyboard */; };
+		8AD16A982497FA6100F1F53A /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD16A972497FA6100F1F53A /* Car.swift */; };
+		8AD16A9C2497FDF300F1F53A /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD16A9B2497FDF300F1F53A /* HeaderView.swift */; };
+		8AD16A9E2497FEFB00F1F53A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD16A9D2497FEFB00F1F53A /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A29BD0924980E3400BFEDF8 /* CarDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailVC.swift; sourceTree = "<group>"; };
 		8AD16A7D2497FA1D00F1F53A /* CoolCars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoolCars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD16A802497FA1D00F1F53A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AD16A822497FA1D00F1F53A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8AD16A842497FA1D00F1F53A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8AD16A842497FA1D00F1F53A /* CarSelectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarSelectVC.swift; sourceTree = "<group>"; };
 		8AD16A872497FA1D00F1F53A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8AD16A892497FA1F00F1F53A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8AD16A8C2497FA1F00F1F53A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8AD16A8E2497FA1F00F1F53A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AD16A972497FA6100F1F53A /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		8AD16A9B2497FDF300F1F53A /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		8AD16A9D2497FEFB00F1F53A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,43 @@
 		8AD16A7F2497FA1D00F1F53A /* CoolCars */ = {
 			isa = PBXGroup;
 			children = (
+				8AD16A962497FA4300F1F53A /* view */,
+				8AD16A952497FA3C00F1F53A /* controller */,
+				8AD16A942497FA3500F1F53A /* model */,
 				8AD16A802497FA1D00F1F53A /* AppDelegate.swift */,
 				8AD16A822497FA1D00F1F53A /* SceneDelegate.swift */,
-				8AD16A842497FA1D00F1F53A /* ViewController.swift */,
 				8AD16A862497FA1D00F1F53A /* Main.storyboard */,
 				8AD16A892497FA1F00F1F53A /* Assets.xcassets */,
 				8AD16A8B2497FA1F00F1F53A /* LaunchScreen.storyboard */,
 				8AD16A8E2497FA1F00F1F53A /* Info.plist */,
 			);
 			path = CoolCars;
+			sourceTree = "<group>";
+		};
+		8AD16A942497FA3500F1F53A /* model */ = {
+			isa = PBXGroup;
+			children = (
+				8AD16A972497FA6100F1F53A /* Car.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		8AD16A952497FA3C00F1F53A /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				8AD16A842497FA1D00F1F53A /* CarSelectVC.swift */,
+				8A29BD0924980E3400BFEDF8 /* CarDetailVC.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		8AD16A962497FA4300F1F53A /* view */ = {
+			isa = PBXGroup;
+			children = (
+				8AD16A9B2497FDF300F1F53A /* HeaderView.swift */,
+				8AD16A9D2497FEFB00F1F53A /* CardView.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +174,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AD16A852497FA1D00F1F53A /* ViewController.swift in Sources */,
+				8AD16A9E2497FEFB00F1F53A /* CardView.swift in Sources */,
+				8AD16A852497FA1D00F1F53A /* CarSelectVC.swift in Sources */,
+				8AD16A9C2497FDF300F1F53A /* HeaderView.swift in Sources */,
+				8A29BD0A24980E3400BFEDF8 /* CarDetailVC.swift in Sources */,
 				8AD16A812497FA1D00F1F53A /* AppDelegate.swift in Sources */,
+				8AD16A982497FA6100F1F53A /* Car.swift in Sources */,
 				8AD16A832497FA1D00F1F53A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

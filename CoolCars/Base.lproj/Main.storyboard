@@ -1,24 +1,339 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Car SelectVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CarSelectVC" customModule="CoolCars" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ydo-x4-bSR" customClass="HeaderView" customModule="CoolCars" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vehicle Swap" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IoE-vq-wZx">
+                                        <rect key="frame" x="145.5" y="71" width="123.5" height="27.5"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="IoE-vq-wZx" firstAttribute="top" secondItem="ydo-x4-bSR" secondAttribute="top" constant="71" id="Mhu-PW-mBa"/>
+                                    <constraint firstItem="IoE-vq-wZx" firstAttribute="centerX" secondItem="ydo-x4-bSR" secondAttribute="centerX" id="aaJ-uC-liV"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HrH-Ib-v39">
+                                <rect key="frame" x="0.0" y="131" width="414" height="765"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="yTQ-ej-L2E">
+                                        <rect key="frame" x="27" y="103" width="360" height="471"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0GE-vx-tjp" customClass="CardView" customModule="CoolCars" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="360" height="225"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Audi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIZ-BA-Xzy">
+                                                        <rect key="frame" x="25" y="117" width="240" height="41"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020 - R8 Spyder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Pg-eF-70u">
+                                                        <rect key="frame" x="25" y="161" width="240" height="20"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swap My Vehicle For This One" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hs0-l3-Yqx">
+                                                        <rect key="frame" x="25" y="195" width="241.5" height="25"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="audi_r8_audi-r8-coupe_2020-1589821595602" translatesAutoresizingMaskIntoConstraints="NO" id="296-Sd-4zs">
+                                                        <rect key="frame" x="25" y="8" width="172" height="101"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="101" id="Upi-fH-UIA"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-right-arrow-96" translatesAutoresizingMaskIntoConstraints="NO" id="sB7-2X-0AJ">
+                                                        <rect key="frame" x="265" y="190" width="51" height="35"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFc-9C-cja">
+                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="225"/>
+                                                        <connections>
+                                                            <action selector="onR8Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pYx-ae-4BD"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="WQC-p5-h5j" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hs0-l3-Yqx" secondAttribute="trailing" symbolic="YES" id="69O-M3-Wpx"/>
+                                                    <constraint firstItem="dFc-9C-cja" firstAttribute="leading" secondItem="0GE-vx-tjp" secondAttribute="leading" id="AGN-C6-Tyt"/>
+                                                    <constraint firstItem="3Pg-eF-70u" firstAttribute="top" secondItem="TIZ-BA-Xzy" secondAttribute="bottom" constant="3" id="HPp-My-SUm"/>
+                                                    <constraint firstAttribute="width" constant="360" id="JQa-7v-ISI"/>
+                                                    <constraint firstItem="WQC-p5-h5j" firstAttribute="bottom" secondItem="hs0-l3-Yqx" secondAttribute="bottom" constant="5" id="Jm2-dl-hxx"/>
+                                                    <constraint firstItem="TIZ-BA-Xzy" firstAttribute="trailing" secondItem="3Pg-eF-70u" secondAttribute="trailing" id="LjY-fQ-ePI"/>
+                                                    <constraint firstItem="hs0-l3-Yqx" firstAttribute="leading" secondItem="3Pg-eF-70u" secondAttribute="leading" id="MNh-sB-QOZ"/>
+                                                    <constraint firstItem="WQC-p5-h5j" firstAttribute="trailing" secondItem="dFc-9C-cja" secondAttribute="trailing" constant="10" id="Qpa-lB-2gu"/>
+                                                    <constraint firstItem="hs0-l3-Yqx" firstAttribute="leading" secondItem="TIZ-BA-Xzy" secondAttribute="leading" id="UFh-nc-C22"/>
+                                                    <constraint firstItem="dFc-9C-cja" firstAttribute="top" secondItem="WQC-p5-h5j" secondAttribute="top" id="UKW-LA-qwO"/>
+                                                    <constraint firstItem="hs0-l3-Yqx" firstAttribute="centerY" secondItem="sB7-2X-0AJ" secondAttribute="centerY" id="X8x-Te-LmC"/>
+                                                    <constraint firstItem="WQC-p5-h5j" firstAttribute="trailing" secondItem="sB7-2X-0AJ" secondAttribute="trailing" constant="44" id="chN-2A-BqL"/>
+                                                    <constraint firstItem="WQC-p5-h5j" firstAttribute="trailing" secondItem="TIZ-BA-Xzy" secondAttribute="trailing" constant="95" id="dln-Sf-nME"/>
+                                                    <constraint firstItem="sB7-2X-0AJ" firstAttribute="top" secondItem="WQC-p5-h5j" secondAttribute="top" constant="190" id="eMy-YE-HL6"/>
+                                                    <constraint firstItem="WQC-p5-h5j" firstAttribute="trailing" secondItem="296-Sd-4zs" secondAttribute="trailing" constant="163" id="ex1-5H-AFX"/>
+                                                    <constraint firstAttribute="bottom" secondItem="TIZ-BA-Xzy" secondAttribute="bottom" constant="67" id="hWG-Jc-Q9Q"/>
+                                                    <constraint firstAttribute="height" constant="225" id="hah-oc-Auf"/>
+                                                    <constraint firstItem="TIZ-BA-Xzy" firstAttribute="top" secondItem="296-Sd-4zs" secondAttribute="bottom" constant="8" symbolic="YES" id="i0L-Ck-qFx"/>
+                                                    <constraint firstItem="hs0-l3-Yqx" firstAttribute="top" secondItem="3Pg-eF-70u" secondAttribute="bottom" constant="14" id="l6P-TH-SR2"/>
+                                                    <constraint firstItem="sB7-2X-0AJ" firstAttribute="leading" secondItem="WQC-p5-h5j" secondAttribute="leading" constant="265" id="nwb-Nb-aQ1"/>
+                                                    <constraint firstItem="sB7-2X-0AJ" firstAttribute="bottom" secondItem="dFc-9C-cja" secondAttribute="bottom" id="oVN-Oa-SFa"/>
+                                                    <constraint firstItem="hs0-l3-Yqx" firstAttribute="leading" secondItem="WQC-p5-h5j" secondAttribute="leading" constant="25" id="sfz-f5-RcF"/>
+                                                    <constraint firstItem="296-Sd-4zs" firstAttribute="leading" secondItem="TIZ-BA-Xzy" secondAttribute="leading" id="vQD-4P-zJj"/>
+                                                    <constraint firstItem="sB7-2X-0AJ" firstAttribute="bottom" secondItem="WQC-p5-h5j" secondAttribute="bottom" id="yir-ui-D8U"/>
+                                                </constraints>
+                                                <viewLayoutGuide key="safeArea" id="WQC-p5-h5j"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Pn-dh-UgT" customClass="CardView" customModule="CoolCars" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="246" width="360" height="225"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Audi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tiZ-x5-TKy">
+                                                        <rect key="frame" x="25" y="117" width="240" height="41"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021 - A4 Sedan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBn-E8-cgi">
+                                                        <rect key="frame" x="25" y="161" width="240" height="23.5"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swap My Vehicle For This One" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FN7-ok-xFG">
+                                                        <rect key="frame" x="25" y="198.5" width="241.5" height="23.5"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="audi_a4_audi-a4_2021-1591043770859" translatesAutoresizingMaskIntoConstraints="NO" id="t3F-RJ-1he">
+                                                        <rect key="frame" x="25" y="8" width="172" height="101"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="172" id="KHY-vz-6Ln"/>
+                                                            <constraint firstAttribute="height" constant="101" id="mnK-6y-XuO"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-right-arrow-96" translatesAutoresizingMaskIntoConstraints="NO" id="UTd-u8-xAP">
+                                                        <rect key="frame" x="265" y="190" width="51" height="35"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="51" id="BsD-U0-hEG"/>
+                                                            <constraint firstAttribute="height" constant="35" id="zOE-cK-oxI"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygo-Mm-e10">
+                                                        <rect key="frame" x="0.0" y="0.0" width="360" height="225"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <connections>
+                                                            <action selector="onA4Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Epo-A7-CPZ"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="FN7-ok-xFG" firstAttribute="top" secondItem="LBn-E8-cgi" secondAttribute="bottom" constant="14" id="3oI-EX-dot"/>
+                                                    <constraint firstAttribute="width" constant="360" id="CH5-XR-29K"/>
+                                                    <constraint firstItem="tiZ-x5-TKy" firstAttribute="trailing" secondItem="LBn-E8-cgi" secondAttribute="trailing" id="Cma-Sn-9I0"/>
+                                                    <constraint firstItem="tiZ-x5-TKy" firstAttribute="leading" secondItem="1Pn-dh-UgT" secondAttribute="leading" constant="25" id="CoG-ij-Gtl"/>
+                                                    <constraint firstAttribute="bottom" secondItem="UTd-u8-xAP" secondAttribute="bottom" id="HgI-h2-hFx"/>
+                                                    <constraint firstItem="LBn-E8-cgi" firstAttribute="top" secondItem="tiZ-x5-TKy" secondAttribute="bottom" constant="3" id="OUY-nv-CUb"/>
+                                                    <constraint firstAttribute="trailing" secondItem="UTd-u8-xAP" secondAttribute="trailing" constant="44" id="Ol6-5z-Cj1"/>
+                                                    <constraint firstAttribute="height" constant="225" id="Vfp-RC-6v6"/>
+                                                    <constraint firstItem="tiZ-x5-TKy" firstAttribute="top" secondItem="t3F-RJ-1he" secondAttribute="bottom" constant="8" symbolic="YES" id="ZsP-2p-7R9"/>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="FN7-ok-xFG" secondAttribute="trailing" constant="20" symbolic="YES" id="gCy-0I-b3f"/>
+                                                    <constraint firstAttribute="bottom" secondItem="tiZ-x5-TKy" secondAttribute="bottom" constant="67" id="gqi-1Z-OgP"/>
+                                                    <constraint firstItem="tiZ-x5-TKy" firstAttribute="leading" secondItem="FN7-ok-xFG" secondAttribute="leading" id="qhU-nd-GM3"/>
+                                                    <constraint firstItem="t3F-RJ-1he" firstAttribute="leading" secondItem="tiZ-x5-TKy" secondAttribute="leading" id="v3P-Qk-gdb"/>
+                                                    <constraint firstItem="tiZ-x5-TKy" firstAttribute="leading" secondItem="LBn-E8-cgi" secondAttribute="leading" id="xVH-eN-gMC"/>
+                                                    <constraint firstAttribute="trailing" secondItem="tiZ-x5-TKy" secondAttribute="trailing" constant="95" id="zet-32-19l"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="yTQ-ej-L2E" firstAttribute="centerX" secondItem="HrH-Ib-v39" secondAttribute="centerX" id="2q9-DU-fpX"/>
+                                    <constraint firstItem="yTQ-ej-L2E" firstAttribute="top" secondItem="HrH-Ib-v39" secondAttribute="top" constant="103" id="4Bk-tU-ysi"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="HrH-Ib-v39" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1lY-6O-Gx7"/>
+                            <constraint firstItem="ydo-x4-bSR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ifi-uc-Acb"/>
+                            <constraint firstItem="ydo-x4-bSR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="LvW-9G-v5i"/>
+                            <constraint firstItem="HrH-Ib-v39" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="131" id="Sum-Dv-0cF"/>
+                            <constraint firstAttribute="bottom" secondItem="HrH-Ib-v39" secondAttribute="bottom" id="UvD-dU-nWx"/>
+                            <constraint firstItem="HrH-Ib-v39" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lqB-LL-hS5"/>
+                            <constraint firstItem="HrH-Ib-v39" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="o96-HP-kis"/>
+                            <constraint firstItem="ydo-x4-bSR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="p91-vv-wY1"/>
+                            <constraint firstItem="HrH-Ib-v39" firstAttribute="top" secondItem="ydo-x4-bSR" secondAttribute="bottom" constant="3" id="wWv-kW-GXt"/>
+                            <constraint firstItem="ydo-x4-bSR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zej-XD-OW1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="Bhq-N8-Kdj" kind="show" identifier="carDetailSegue" id="dNY-lS-XND"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="128.57142857142856"/>
+        </scene>
+        <!--Car DetailVC-->
+        <scene sceneID="RIb-zB-Pc5">
+            <objects>
+                <viewController id="Bhq-N8-Kdj" customClass="CarDetailVC" customModule="CoolCars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EAb-nR-oMm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Current Vehicle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQu-Qm-ePd">
+                                <rect key="frame" x="20" y="80" width="204" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="HTs-0y-Ia9"/>
+                                    <constraint firstAttribute="width" constant="204" id="Np6-j1-vsr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="audi_r8_audi-r8-coupe_2020-1589821595602" translatesAutoresizingMaskIntoConstraints="NO" id="4nw-dP-9kx">
+                                <rect key="frame" x="57" y="191" width="300" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="bbh-st-Aw3"/>
+                                    <constraint firstAttribute="height" constant="190" id="h14-c0-Wrk"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Audi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="giM-Vb-pof">
+                                <rect key="frame" x="20" y="388" width="66" height="41"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020 - R8 Spyder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Wf-3n-zEI">
+                                <rect key="frame" x="20" y="437" width="112" height="20.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="yr8-dd-DqL">
+                                <rect key="frame" x="20" y="491" width="50" height="152"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-gas-station-100" translatesAutoresizingMaskIntoConstraints="NO" id="BKx-qS-FEu">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="SvZ-VR-cf4"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-rocket-100" translatesAutoresizingMaskIntoConstraints="NO" id="2ra-Pb-7Bz">
+                                        <rect key="frame" x="0.0" y="51" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="XPN-y2-4iN"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-speed-100" translatesAutoresizingMaskIntoConstraints="NO" id="CzJ-iE-mb9">
+                                        <rect key="frame" x="0.0" y="102" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="RoT-Mf-hwc"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="RQo-nB-dr5"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0aE-63-0Xf">
+                                <rect key="frame" x="83" y="491" width="51" height="166"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13 / 20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGD-Jv-PCE">
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="o1o-Uw-mhW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-LightOblique" family="Avenir" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="562 hp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fev-MA-q90">
+                                        <rect key="frame" x="0.0" y="58" width="51" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="2hk-Zx-5Xd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-LightOblique" family="Avenir" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.8 s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MlD-x3-jxD">
+                                        <rect key="frame" x="0.0" y="116" width="51" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="jkt-yg-MEx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-LightOblique" family="Avenir" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2Wf-3n-zEI" firstAttribute="leading" secondItem="fep-bR-o9v" secondAttribute="leading" constant="20" id="3Ja-u3-RRs"/>
+                            <constraint firstItem="4nw-dP-9kx" firstAttribute="top" secondItem="qQu-Qm-ePd" secondAttribute="bottom" constant="27" id="8we-4m-Qk3"/>
+                            <constraint firstItem="giM-Vb-pof" firstAttribute="leading" secondItem="fep-bR-o9v" secondAttribute="leading" constant="20" id="BXJ-ih-xM0"/>
+                            <constraint firstItem="fep-bR-o9v" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2Wf-3n-zEI" secondAttribute="trailing" symbolic="YES" id="KwU-X6-wDj"/>
+                            <constraint firstItem="yr8-dd-DqL" firstAttribute="top" secondItem="2Wf-3n-zEI" secondAttribute="bottom" constant="33.5" id="T0K-WM-HuF"/>
+                            <constraint firstItem="0aE-63-0Xf" firstAttribute="leading" secondItem="yr8-dd-DqL" secondAttribute="trailing" constant="13" id="aNR-81-02y"/>
+                            <constraint firstItem="yr8-dd-DqL" firstAttribute="leading" secondItem="fep-bR-o9v" secondAttribute="leading" constant="20" id="aiw-OF-FLZ"/>
+                            <constraint firstItem="2Wf-3n-zEI" firstAttribute="top" secondItem="giM-Vb-pof" secondAttribute="bottom" constant="8" id="amV-gP-Spn"/>
+                            <constraint firstItem="giM-Vb-pof" firstAttribute="top" secondItem="4nw-dP-9kx" secondAttribute="bottom" constant="7" id="gzQ-ew-el2"/>
+                            <constraint firstItem="fep-bR-o9v" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="giM-Vb-pof" secondAttribute="trailing" symbolic="YES" id="jNZ-42-5gC"/>
+                            <constraint firstItem="qQu-Qm-ePd" firstAttribute="leading" secondItem="fep-bR-o9v" secondAttribute="leading" constant="20" id="kda-yE-nkN"/>
+                            <constraint firstItem="0aE-63-0Xf" firstAttribute="top" secondItem="2Wf-3n-zEI" secondAttribute="bottom" constant="33.5" id="pxq-xT-phN"/>
+                            <constraint firstItem="qQu-Qm-ePd" firstAttribute="top" secondItem="fep-bR-o9v" secondAttribute="top" constant="80" id="yxk-IK-gCu"/>
+                            <constraint firstItem="4nw-dP-9kx" firstAttribute="centerX" secondItem="EAb-nR-oMm" secondAttribute="centerX" id="zav-6L-l9T"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fep-bR-o9v"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FaV-qe-N2Y"/>
+                    <connections>
+                        <outlet property="carFuel" destination="gGD-Jv-PCE" id="ILI-JF-1yY"/>
+                        <outlet property="carHorsePower" destination="Fev-MA-q90" id="QUo-cf-Vz6"/>
+                        <outlet property="carImage" destination="4nw-dP-9kx" id="wNn-mE-3df"/>
+                        <outlet property="carMake" destination="giM-Vb-pof" id="XfA-h4-BjL"/>
+                        <outlet property="carModelYear" destination="2Wf-3n-zEI" id="Pww-24-1fI"/>
+                        <outlet property="carPerformance" destination="MlD-x3-jxD" id="cdi-8b-IQr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P0z-LQ-8hz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1000.0000000000001" y="124.55357142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="audi_a4_audi-a4_2021-1591043770859" width="256" height="156.33332824707031"/>
+        <image name="audi_r8_audi-r8-coupe_2020-1589821595602" width="256" height="156.33332824707031"/>
+        <image name="icons8-gas-station-100" width="100" height="100"/>
+        <image name="icons8-right-arrow-96" width="96" height="96"/>
+        <image name="icons8-rocket-100" width="100" height="100"/>
+        <image name="icons8-speed-100" width="100" height="100"/>
+    </resources>
 </document>
